@@ -17,3 +17,10 @@ for i in range(noofvisit):
             print(f"going back to {currentpage}")
         else:
             print("no previous page available!")
+    while input("do you want to go forward?(yes/no):").lower() == "yes":
+        if not forwardhistory.empty():
+            backwardhistory.put(currentpage)
+            currentpage= forwardhistory.get()
+            print(f"going forward to {currentpage}")
+        else:
+            print("no forward page available!")
