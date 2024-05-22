@@ -8,5 +8,5 @@ for i in range(1,10):
 
 c=10
 while c>=1:
-    print(c *"t  ",end=" ")
+    print(c *" ",end=" ")
     c=c-1

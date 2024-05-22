@@ -1,33 +1,76 @@
+# Parent Class: Person
 class Person:
-    def __init__(self, name, age):
+    def __init__(self, name, age, cid_number):
         self.name = name
         self.age = age
+        self.cid_number = cid_number
 
-    def display_info(self):
-        print(f"Name: {self.name}, Age: {self.age}")
+    def walk(self):
+        print(f"{self.name} is walking.")
 
+    def talk(self):
+        print(f"{self.name} is talking.")
+
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+    def sleep(self):
+        print(f"{self.name} is sleeping.")
+
+# Child Class: Student
 class Student(Person):
-    def __init__(self, name, age, student_id):
-        super().__init__(name, age)
+    def __init__(self, name, age, cid_number, student_id, course, year, gpa):
+        super().__init__(name, age, cid_number)
         self.student_id = student_id
+        self.course = course
+        self.year = year
+        self.gpa = gpa
 
-    def display_info(self):
-        super().display_info()
-        print(f"Student ID: {self.student_id}")
+    def study(self):
+        print(f"{self.name} is studying.")
 
+    def attend_class(self):
+        print(f"{self.name} is attending class.")
+
+    def write_exam(self):
+        print(f"{self.name} is writing an exam.")
+
+# Child Class: Teacher
 class Teacher(Person):
-    def __init__(self, name, age, employee_id):
-        super().__init__(name, age)
-        self.employee_id = employee_id
+    def __init__(self, name, age, cid_number, subject, salary, department, designation):
+        super().__init__(name, age, cid_number)
+        self.subject = subject
+        self.salary = salary
+        self.department = department
+        self.designation = designation
 
-    def display_info(self):
-        super().display_info()
-        print(f"Employee ID: {self.employee_id}")
+    def teach(self):
+        print(f"{self.name} is teaching {self.subject}.")
 
-# Creating Objects
-student1 = Student("Alice", 20, "S001")
-teacher1 = Teacher("Mr. Smith", 35, "T001")
+    def grade_students(self):
+        print(f"{self.name} is grading students.")
 
-# Displaying Information
-student1.display_info()
-teacher1.display_info()
+    def attend_meeting(self):
+        print(f"{self.name} is attending a meeting.")
+
+# Creating Objects and Demonstrating Behaviors
+# Creating a Student object
+student1 = Student(name="Alice", age=20, cid_number="S123456", student_id="STU001", course="Computer Science", year=2, gpa=3.8)
+print(f"Student: {student1.name}, Age: {student1.age}, CID: {student1.cid_number}, Student ID: {student1.student_id}, Course: {student1.course}, Year: {student1.year}, GPA: {student1.gpa}")
+student1.walk()
+student1.study()
+student1.attend_class()
+student1.write_exam()
+student1.eat()
+student1.sleep()
+
+# Creating a Teacher object
+teacher1 = Teacher(name="Mr. Smith", age=40, cid_number="T654321", subject="Mathematics", salary=50000, department="Mathematics", designation="Professor")
+print(f"Teacher: {teacher1.name}, Age: {teacher1.age}, CID: {teacher1.cid_number}, Subject: {teacher1.subject}, Salary: {teacher1.salary}, Department: {teacher1.department}, Designation: {teacher1.designation}")
+teacher1.walk()
+teacher1.talk()
+teacher1.teach()
+teacher1.grade_students()
+teacher1.attend_meeting()
+teacher1.eat()
+teacher1.sleep()

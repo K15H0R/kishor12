@@ -10,15 +10,3 @@ while count<=b:
     f=count*a
     print(a,"x",count,"=",f)
     count=count+1
-
-   
-  
-f=1
-while f<=15:
-    if f==3:
-        pass
-    elif f==7:
-        break
-    else:
-        print(f)
-    f=f+1 
