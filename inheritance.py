@@ -1,4 +1,3 @@
-# Parent Class: Person
 class Person:
     def __init__(self, name, age, cid_number):
         self.name = name
@@ -17,7 +16,6 @@ class Person:
     def sleep(self):
         print(f"{self.name} is sleeping.")
 
-# Child Class: Student
 class Student(Person):
     def __init__(self, name, age, cid_number, student_id, course, year, gpa):
         super().__init__(name, age, cid_number)
@@ -35,7 +33,6 @@ class Student(Person):
     def write_exam(self):
         print(f"{self.name} is writing an exam.")
 
-# Child Class: Teacher
 class Teacher(Person):
     def __init__(self, name, age, cid_number, subject, salary, department, designation):
         super().__init__(name, age, cid_number)
@@ -53,9 +50,8 @@ class Teacher(Person):
     def attend_meeting(self):
         print(f"{self.name} is attending a meeting.")
 
-# Creating Objects and Demonstrating Behaviors
-# Creating a Student object
-student1 = Student(name="Alice", age=20, cid_number="S123456", student_id="STU001", course="Computer Science", year=2, gpa=3.8)
+
+student1 = Student(name="kishor", age=20, cid_number="123456", student_id="02230266", course="Computer Science", year=2, gpa=3.8)
 print(f"Student: {student1.name}, Age: {student1.age}, CID: {student1.cid_number}, Student ID: {student1.student_id}, Course: {student1.course}, Year: {student1.year}, GPA: {student1.gpa}")
 student1.walk()
 student1.study()
@@ -64,8 +60,8 @@ student1.write_exam()
 student1.eat()
 student1.sleep()
 
-# Creating a Teacher object
-teacher1 = Teacher(name="Mr. Smith", age=40, cid_number="T654321", subject="Mathematics", salary=50000, department="Mathematics", designation="Professor")
+
+teacher1 = Teacher(name="madam sonam", age=27, cid_number="654321", subject="Mathematics", salary=24000, department="Mathematics", designation="Professor")
 print(f"Teacher: {teacher1.name}, Age: {teacher1.age}, CID: {teacher1.cid_number}, Subject: {teacher1.subject}, Salary: {teacher1.salary}, Department: {teacher1.department}, Designation: {teacher1.designation}")
 teacher1.walk()
 teacher1.talk()
